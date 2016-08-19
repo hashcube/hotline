@@ -5,7 +5,9 @@
   "libraries": [
     "hotline_sdk"
   ],
-  "jars": [],
+  "jars": [
+    "libs/hotline.jar"
+  ],
   "injectionXML": "manifest.xml",
   "injectionXSL": "manifest.xsl"
 }
