@@ -1,0 +1,73 @@
+<!--START_PLUGINS_MANIFEST-->
+  <!-- [Mandatory] Hotline requires internet to send and receive messages -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+  <!-- Google GCM Permissions -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+  <!-- Keeps the processor from sleeping when a message is received. -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+<!--END_PLUGINS_MANIFEST-->
+<!--START_PLUGINS_APPLICATION-->
+  <!--Hotline-->
+  <meta-data android:name="HOTLINE_APP_ID" android:value="" />
+  <meta-data android:name="HOTLINE_APP_KEY" android:value="" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.ChannelListActivity"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.ConversationDetailActivity"
+    android:configChanges="orientation|screenSize"
+    android:theme="@style/Theme.Hotline.SelectedTheme"
+    android:windowSoftInputMode="stateHidden" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.DeeplinkInterstitialActivity"
+    android:screenOrientation="portrait"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.PictureAttachmentActivity"
+    android:configChanges="orientation|screenSize"
+    android:windowSoftInputMode="adjustResize"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.CategoryListActivity"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.ArticleListActivity"
+    android:windowSoftInputMode="adjustResize"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.ArticleDetailActivity"
+    android:theme="@style/Theme.Hotline.SelectedTheme" />
+
+  <activity
+    android:name="com.freshdesk.hotline.activity.InterstitialActivity"
+    android:configChanges="orientation|screenSize"
+    android:theme="@style/Theme.AppCompat" />
+
+  <service android:name="com.freshdesk.hotline.service.HotlineService" />
+
+  <receiver android:name="com.freshdesk.hotline.receiver.HotlineReceiver">
+    <intent-filter>
+      <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+    </intent-filter>
+    <intent-filter>
+      <action android:name="android.intent.action.BOOT_COMPLETED" />
+    </intent-filter>
+  </receiver>
+
+  <receiver android:name="com.freshdesk.hotline.receiver.AppUpdateReceiver">
+    <intent-filter>
+      <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+    </intent-filter>
+  </receiver>
+
+<!--END_PLUGINS_APPLICATION-->

@@ -1,0 +1,11 @@
+{
+  "copyFiles": [
+    "HotlinePlugin.java"
+  ],
+  "libraries": [
+    "hotline_sdk"
+  ],
+  "jars": [],
+  "injectionXML": "manifest.xml",
+  "injectionXSL": "manifest.xsl"
+}
