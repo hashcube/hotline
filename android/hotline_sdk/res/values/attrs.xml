@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Action Icons -->
+    <attr name="hotlinePlayIcon" format="reference" />
+    <attr name="hotlineStopIcon" format="reference" />
+    <attr name="hotlineSendIcon" format="reference" />
+    <attr name="hotlineCancelIcon" format="reference" />
+    <attr name="hotlineAttachIcon" format="reference" />
+    <attr name="hotlineRecordIcon" format="reference" />
+
+    <!-- Menu Icons -->
+    <attr name="hotlineSearchIcon" format="reference" />
+    <attr name="hotlineSpeakerIcon" format="reference" />
+    <attr name="hotlineEarpieceIcon" format="reference" />
+    <attr name="hotlineContactUsIcon" format="reference" />
+
+    <!-- Misc Icons-->
+    <attr name="hotlineAvatarIcon" format="reference" />
+
+    <!-- Chat Bubbles -->
+    <attr name="hotlineChatBubbleLeft" format="reference" />
+    <attr name="hotlineChatBubbleRight" format="reference" />
+
+    <!-- Misc -->
+    <attr name="hotlineVoiceVisualizer" format="reference" />
+    <attr name="hotlineVoiceMessageSeekbar" format="reference" />
+    <attr name="hotlineVoiceMessageSeekbarThumb" format="reference" />
+    <attr name="hotlineActionSelectableItemBackground" format="reference" />
+
+    <!-- Text Appearance Customizations - Common -->
+    <attr name="hotlineContactUsTextAppearance" format="reference" />
+
+    <!-- FAQ Category List Item Customizations -->
+    <attr name="hotlineCategoryListItemStyle" format="reference" />
+    <attr name="hotlineCategoryNameTextAppearance" format="reference" />
+    <attr name="hotlineCategoryDescriptionTextAppearance" format="reference" />
+    <attr name="hotlineCategoryListEmptyWarningTextAppearance" format="reference" />
+    <attr name="hotlineCategoryAltIconStyle" format="reference" />
+
+    <!-- Article List Customizations -->
+    <attr name="hotlineArticleListStyle" format="reference" />
+    <attr name="hotlineArticleListItemStyle" format="reference" />
+    <attr name="hotlineArticleTitleTextAppearance" format="reference" />
+    <attr name="hotlineArticleListEmptyWarningTextAppearance" format="reference" />
+
+    <!-- Article Detail Customizations -->
+    <attr name="hotlineArticleVotingPromptBackground" format="reference" />
+    <attr name="hotlineArticleVotingPromptTextStyle" format="reference" />
+    <attr name="hotlineArticleUpvoteStyle" format="reference" />
+    <attr name="hotlineArticleDownvoteStyle" format="reference" />
+
+    <!-- Message Channel Item Customizations -->
+    <attr name="hotlineChannelListItemStyle" format="reference" />
+    <attr name="hotlineChannelAltIconStyle" format="reference" />
+    <attr name="hotlineChannelNameTextAppearance" format="reference" />
+    <attr name="hotlineChannelDescriptionTextAppearance" format="reference" />
+    <attr name="hotlineChannelLastUpdatedTextAppearance" format="reference" />
+    <attr name="hotlineChannelUnreadCountTextAppearance" format="reference" />
+    <attr name="hotlineChannelListEmptyWarningTextAppearance" format="reference" />
+
+    <!-- Message List Item Customizations -->
+    <!-- Style for the message list view -->
+    <attr name="hotlineMessageListStyle" format="reference" />
+    <!-- Style for the each of the items in the message list -->
+    <attr name="hotlineMessageListItemStyle" format="reference" />
+    <attr name="hotlineMessageDeepLinkStyle" format="reference" />
+    <attr name="hotlineMessageReplyEditTextViewStyle" format="reference" />
+
+    <attr name="hotlineAgentNameTextAppearance" format="reference" />
+    <attr name="hotlineUserMessageTextAppearance" format="reference" />
+    <attr name="hotlineAgentMessageTextAppearance" format="reference" />
+    <attr name="hotlineUserMessageTimeTextAppearance" format="reference" />
+    <attr name="hotlineAgentMessageTimeTextAppearance" format="reference" />
+    <attr name="hotlineVoiceMessageDurationTextAppearance" format="reference" />
+    <attr name="hotlineConversationBannerMessageStyle" format="reference" />
+
+</resources>
