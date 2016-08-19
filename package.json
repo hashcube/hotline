@@ -3,7 +3,7 @@
   "version": "1.0.12-1",
   "devkit": {
     "clientPaths": {
-      "mobihelp": "js"
+      "hotline": "js"
     },
     "extensions": {
       "android": "android"
