@@ -1,4 +1,7 @@
+/* global NATIVE */
 function pluginSend(evt, params) {
+  "use strict";
+
   NATIVE.plugins.sendEvent("HotlinePlugin", evt,
     JSON.stringify(params || {}));
 }
@@ -7,7 +10,7 @@ exports = new (Class(function () {
   "use strict";
 
   this.setUserInfo = function (email, full_name) {
-    pluginSend("setUserInfo", {full_name: full_name, email: email});
+    pluginSend("setUserInfo", {name: full_name, email: email});
   };
 
   this.setUserEmail = function (email) {
@@ -15,7 +18,7 @@ exports = new (Class(function () {
   };
 
   this.setUserFullName = function (full_name) {
-    pluginSend("setUserFullName", {full_name: full_name});
+    pluginSend("setUserFullName", {name: full_name});
   };
 
   this.clearUserData = function () {
