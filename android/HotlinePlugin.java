@@ -92,7 +92,7 @@ public class HotlinePlugin implements IPlugin {
   public void setName (String param) {
     JSONObject reqJson;
 
-    try{
+    try {
       reqJson = new JSONObject(param);
       hlUser.setName(reqJson.getString("name"));
     } catch (Exception e){
@@ -103,9 +103,20 @@ public class HotlinePlugin implements IPlugin {
   public void setEmail (String param) {
     JSONObject reqJson;
 
-    try{
+    try {
       reqJson = new JSONObject(param);
       hlUser.setEmail(reqJson.getString("email"));
+    } catch (Exception e){
+      logger.log(TAG + "{exception}", "" + e.getMessage());
+    }
+  }
+
+  public void setExternalId (String param) {
+    JSONObject reqJson;
+
+    try {
+      reqJson = new JSONObject(param);
+      hlUser.setExternalId(reqJson.getString("id"));
     } catch (Exception e){
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
@@ -115,7 +126,7 @@ public class HotlinePlugin implements IPlugin {
     JSONObject reqJson;
     Map<String, String> userMeta = new HashMap<String, String>();
 
-    try{
+    try {
       reqJson = new JSONObject(param);
       userMeta.put(reqJson.getString("field_name"), reqJson.getString("value"));
     } catch (Exception e){
