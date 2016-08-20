@@ -9,24 +9,24 @@ function pluginSend(evt, params) {
 exports = new (Class(function () {
   "use strict";
 
-  this.setUserInfo = function (email, full_name) {
-    pluginSend("setUserInfo", {name: full_name, email: email});
+  this.setName = function (name) {
+    pluginSend("setName", {name: name});
   };
 
-  this.setUserEmail = function (email) {
-    pluginSend("setUserEmail", {email: email});
+  this.setEmail = function (email) {
+    pluginSend("setEmail", {email: email});
   };
 
-  this.setUserFullName = function (full_name) {
-    pluginSend("setUserFullName", {name: full_name});
+  this.setExternalId = function (id) {
+    pluginSend("setExternalId", {id: id});
+  };
+
+  this.addMetaData = function (name, value) {
+    pluginSend("addMetaData", {field_name: name, value: value});
   };
 
   this.clearUserData = function () {
     pluginSend("clearUserData", {});
-  };
-
-  this.addCustomData = function (name, value) {
-    pluginSend("addCustomData", {field_name: name, value: value});
   };
 
   this.showConversations = function () {

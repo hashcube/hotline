@@ -89,28 +89,7 @@ public class HotlinePlugin implements IPlugin {
   public void onBackPressed() {
   }
 
-  public void setUserInfo(String userInfo) {
-    try {
-      JSONObject userObj = new JSONObject(userInfo);
-      hlUser.setName((String) userObj.get("name"));
-      hlUser.setEmail((String) userObj.get("email"));
-    } catch (Exception e) {
-      logger.log(TAG + "{exception}", "" + e.getMessage());
-    }
-  }
-
-  public void setUserEmail (String param) {
-    JSONObject reqJson;
-
-    try{
-      reqJson = new JSONObject(param);
-      hlUser.setEmail(reqJson.getString("email"));
-    } catch (Exception e){
-      logger.log(TAG + "{exception}", "" + e.getMessage());
-    }
-  }
-
-  public void setUserFullName (String param) {
+  public void setName (String param) {
     JSONObject reqJson;
 
     try{
@@ -121,7 +100,18 @@ public class HotlinePlugin implements IPlugin {
     }
   }
 
-  public void addCustomData (String param) {
+  public void setEmail (String param) {
+    JSONObject reqJson;
+
+    try{
+      reqJson = new JSONObject(param);
+      hlUser.setEmail(reqJson.getString("email"));
+    } catch (Exception e){
+      logger.log(TAG + "{exception}", "" + e.getMessage());
+    }
+  }
+
+  public void addMetaData (String param) {
     JSONObject reqJson;
     Map<String, String> userMeta = new HashMap<String, String>();
 
