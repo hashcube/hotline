@@ -135,4 +135,22 @@ public class HotlinePlugin implements IPlugin {
   public void showFAQs(String params) {
     Hotline.showFAQs(appContext);
   }
+
+  public class UnreadCountEvent extends com.tealeaf.event.Event {
+    int count;
+
+    public UnreadCountEvent(String status, int count) {
+      super("hotlineUnreadCount");
+      this.count = count;
+    }
+  }
+
+  public void getUnreadCountAsync (String params) {
+    Hotline.getInstance(appContext).getUnreadCountAsync(new UnreadCountCallback() {
+      @Override
+      public void onResult(HotlineCallbackStatus hotlineCallbackStatus, int unreadCount) {
+        EventQueue.pushEvent(new UnreadCountEvent("success", unreadCount));
+      }
+    });
+  }
 }
