@@ -1,0 +1,16 @@
+{
+  "code": [
+    "HotlinePlugin.h",
+    "HotlinePlugin.mm"
+  ],
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "libFDHotlineSDK.a"
+  ],
+  "resources": [
+    "hotline-io/HLLocalization.bundle",
+    "hotline-io/HLResources.bundle",
+    "hotline-io/KonotorModels.bundle"
+  ]
+}
