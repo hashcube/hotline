@@ -15,7 +15,6 @@ function pluginOn(evt, next) {
 function invokeCallbacks(list) {
   "use strict";
 
-  // Pop off the first two arguments and keep the rest
   var args = Array.prototype.splice.call(arguments, 1),
     i = 0,
     len = list.length,
