@@ -6,6 +6,7 @@
       "hotline": "js"
     },
     "extensions": {
+      "ios": "ios",
       "android": "android"
     }
   }
