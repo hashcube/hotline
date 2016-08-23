@@ -56,6 +56,9 @@ exports = new (Class(function () {
   };
 
   this.addMetaData = function (name, value) {
+    if (typeof value !== "string") {
+      value = JSON.stringify(value);
+    }
     pluginSend("addMetaData", {field_name: name, value: value});
   };
 
@@ -73,7 +76,7 @@ exports = new (Class(function () {
 
   this.getUnreadCountAsync = function (cb) {
     unread_cb.push(cb);
-    pluginSend("getUnreadCountAsync");
+    pluginSend("getUnreadCountAsync", {});
   };
 
 }))();
