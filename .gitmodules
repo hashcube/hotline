@@ -1,3 +1,0 @@
-[submodule "ios/hotline-ios"]
-	path = ios/hotline-ios
-	url = git@github.com:freshdesk/hotline-ios.git
