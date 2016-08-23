@@ -1,7 +1,6 @@
 #import "HotlinePlugin.h"
 
 @interface HotlinePlugin()
-@property NSInteger unread_count;
 @end
 
 @implementation HotlinePlugin
@@ -66,7 +65,7 @@
 }
 
 - (void) clearUserData: (NSDictionary *)jsonObject {
-  [[Hotline sharedInstance] clearUserData];
+  [[Hotline sharedInstance] clearUserDataWithCompletion:nil];
 }
 
 - (void) showConversations: (NSDictionary *)jsonObject {
@@ -78,17 +77,12 @@
 }
 
 - (void) getUnreadCountAsync: (NSDictionary *)jsonObject {
-  NSInteger unread_count = 0;
-
-  @try {
-    unread_count = [[Hotline sharedInstance] getUnreadMessagesCount];
-    [[PluginManager get] dispatchJSEvent:[NSDictionary dictionaryWithObjectsAndKeys:
-                          @"hotlineUnreadCount", @"name",
-                          [NSString stringWithFormat: @"%ld", unread_count], @"count",
-                          nil]];
-  }
-  @catch (NSException *exception) {
-    NSLOG(@"{hotline} Failure to get: %@", exception);
-  }
+  [[Hotline sharedInstance]unreadCountWithCompletion:^(NSInteger count) {
+      NSLog(@"Unread count (Async) : %d", (int)count);
+      [[PluginManager get] dispatchJSEvent:[NSDictionary dictionaryWithObjectsAndKeys:
+                            @"hotlineUnreadCount", @"name",
+                            [NSString stringWithFormat: @"%ld", count], @"count",
+                            nil]];
+  }];
 }
 @end
