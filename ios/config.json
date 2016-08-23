@@ -9,8 +9,8 @@
     "libFDHotlineSDK.a"
   ],
   "resources": [
-    "hotline-io/HLLocalization.bundle",
-    "hotline-io/HLResources.bundle",
-    "hotline-io/KonotorModels.bundle"
+    "HLLocalization.bundle",
+    "HLResources.bundle",
+    "KonotorModels.bundle"
   ]
 }
