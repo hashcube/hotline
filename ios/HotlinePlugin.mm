@@ -77,7 +77,11 @@
 }
 
 - (void) showFAQs: (NSDictionary *)jsonObject {
-  [[Hotline sharedInstance] showFAQs:self.viewController];
+  FAQOptions *options = [FAQOptions new];
+
+  options.showContactUsOnFaqScreens = YES;
+  options.showContactUsOnAppBar = YES;
+  [[Hotline sharedInstance] showFAQs:self.viewController withOptions:options];
 }
 
 - (void) getUnreadCountAsync: (NSDictionary *)jsonObject {
