@@ -77,16 +77,34 @@
 }
 
 - (void) showFAQs: (NSDictionary *)jsonObject {
-  [[Hotline sharedInstance] showFAQs:self.viewController];
+  FAQOptions *options = [FAQOptions new];
+
+  options.showContactUsOnFaqScreens = YES;
+  options.showContactUsOnAppBar = YES;
+  [[Hotline sharedInstance] showFAQs:self.viewController withOptions:options];
 }
 
 - (void) getUnreadCountAsync: (NSDictionary *)jsonObject {
+  NSLOG(@"{hotline}: get unread count");
   [[Hotline sharedInstance]unreadCountWithCompletion:^(NSInteger count) {
-      NSLog(@"Unread count (Async) : %d", (int)count);
+      NSLOG(@"{hotline}: Unread count (Async) : %d", (int)count);
       [[PluginManager get] dispatchJSEvent:[NSDictionary dictionaryWithObjectsAndKeys:
                             @"hotlineUnreadCount", @"name",
                             [NSString stringWithFormat: @"%ld", count], @"count",
                             nil]];
   }];
+}
+
+- (void) didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken application:(UIApplication *)app {
+  NSLog(@"{hotline}: didRegisterNotification");
+  [[Hotline sharedInstance] updateDeviceToken:deviceToken];
+}
+
+- (void) didReceiveRemoteNotification:(NSDictionary *)userInfo application:(UIApplication *)app {
+  NSLog(@"{hotline}: didReceiveNotification");
+  if ([[Hotline sharedInstance]isHotlineNotification:userInfo]) {
+    NSLog(@"{hotline}: hotline notification!");
+    [[Hotline sharedInstance]handleRemoteNotification:userInfo andAppstate:app.applicationState];
+  }
 }
 @end
