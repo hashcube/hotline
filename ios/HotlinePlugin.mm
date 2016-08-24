@@ -29,6 +29,10 @@
     self.viewController = appDelegate.tealeafViewController;
 
     HotlineConfig *config = [[HotlineConfig alloc]initWithAppID:appID andAppKey:appKey];
+    config.voiceMessagingEnabled = YES;
+    config.pictureMessagingEnabled = YES;
+    config.showNotificationBanner = YES;
+    config.agentAvatarEnabled = YES;
 
     [[Hotline sharedInstance] initWithConfig:config];
   }
