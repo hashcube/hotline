@@ -1,9 +1,9 @@
 {
   "name": "hotline",
-  "version": "1.0.12-1",
+  "version": "1.0.0",
   "devkit": {
     "clientPaths": {
-      "mobihelp": "js"
+      "hotline": "js"
     },
     "extensions": {
       "android": "android"

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Message list view background color -->
+    <color name="hotline_message_list_bg">#F0F2F4</color>
+
+    <!-- Message list item background color -->
+    <color name="hotline_message_list_item_bg">@null</color>
+
+    <!-- Message reply edit text view text color -->
+    <color name="hotline_message_reply_text">#252525</color>
+
+    <!-- Message reply edit text view hint text color -->
+    <color name="hotline_message_reply_hint_text">#606060</color>
+
+    <!-- Message unread count bubble background in channel list screen -->
+    <color name="hotline_channel_unread_count_bg">#D32F2F</color>
+
+    <!-- Notification accent color i.e Notification#color (small icon background) Note: Works only in Android 5.0+ -->
+    <color name="hotline_notification_accent_color">@android:color/transparent</color>
+
+    <!-- Background color for voting view in FAQ Detail -->
+    <color name="hotline_voting_view_bg">?android:attr/windowBackground</color>
+
+    <!-- Fallback background color for the faq voting view in FAQ detail page, if hotline_voting_view_bg was set to transparent -->
+    <color name="hotline_voting_view_bg_fallback">@color/hotline_background_grey</color>
+
+    <!-- Divider colors -->
+    <!-- Divider between each item in the article list -->
+    <color name="hotline_article_list_divider">#C7C7C7</color>
+
+    <!-- Divider above the voting view in FAQ Detail -->
+    <color name="hotline_voting_view_divider">#BBB</color>
+
+    <!-- Divider between each message item in the message list -->
+    <color name="hotline_message_list_divider">@null</color>
+
+    <!-- Divider between message list and reply view -->
+    <color name="hotline_message_list_reply_view_divider">#D0D0D0</color>
+
+    <!-- Misc Colors -->
+    <color name="hotline_background_grey">#696969</color>
+    <color name="hotline_background_color">#EFEFEF</color>
+    <color name="hotline_text_color">#707070</color>
+    <color name="hotline_theme_color">#505050</color>
+    <color name="hotline_message_read">#F0F0F0</color>
+    <color name="hotline_channel_alt_text_bg">#3F51B5</color>
+    <color name="hotline_category_alt_text_bg">#2196F3</color>
+
+    <color name="hotline_seekbar_bg_start">#000000</color>
+    <color name="hotline_seekbar_bg_center">#000000</color>
+    <color name="hotline_seekbar_bg_end">#000000</color>
+
+    <color name="hotline_seekbar_progress_start">#505050</color>
+    <color name="hotline_seekbar_progress_center">#505050</color>
+    <color name="hotline_seekbar_progress_end">#505050</color>
+
+    <color name="hotline_seekbar_sec_progress_start">#80FFD300</color>
+    <color name="hotline_seekbar_sec_progress_center">#80FFB600</color>
+    <color name="hotline_seekbar_sec_progress_end">#A0FFCB00</color>
+
+    <color name="hotline_visualizer_bg_start">#FFFFFF</color>
+    <color name="hotline_visualizer_bg_center">#FFFFFF</color>
+    <color name="hotline_visualizer_bg_end">#FFFFFF</color>
+
+    <color name="hotline_visualizer_progress_start">#505050</color>
+    <color name="hotline_visualizer_progress_center">#505050</color>
+    <color name="hotline_visualizer_progress_end">#505050</color>
+
+    <color name="hotline_visualizer_sec_progress_start">#80FFD300</color>
+    <color name="hotline_visualizer_sec_progress_center">#80FFB600</color>
+    <color name="hotline_visualizer_sec_progress_end">#A0FFCB00</color>
+
+    <color name="hotline_contact_us_btn_bg_normal">#2196F3</color>
+    <color name="hotline_contact_us_btn_bg_pressed">#1976D2</color>
+</resources>
