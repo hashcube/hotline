@@ -1,0 +1,22 @@
+{
+  "code": [
+    "Hotline.h",
+    "HotlinePlugin.h",
+    "HotlinePlugin.mm"
+  ],
+  "frameworks": [
+    "Foundation",
+    "AVFoundation",
+    "AudioToolbox",
+    "CoreMedia",
+    "CoreData",
+    "ImageIO",
+    "SystemConfiguration",
+    "libFDHotlineSDK.a"
+  ],
+  "resources": [
+    "HLLocalization.bundle",
+    "HLResources.bundle",
+    "KonotorModels.bundle"
+  ]
+}
