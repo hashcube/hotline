@@ -1,22 +1,25 @@
 #import "HotlinePlugin.h"
 
 @interface HotlinePlugin()
+@property (nonatomic, retain) NSData *deviceToken;
+@property (nonatomic) BOOL initDone;
 @end
 
 @implementation HotlinePlugin
 
+
 // The plugin must call super dealloc.
 - (void) dealloc {
+  [self.deviceToken release];
   [super dealloc];
 }
 
 // The plugin must call super init.
 - (id) init {
-  self = [super init];
-  if (!self) {
-    return nil;
+  if(self = [super init]) {
+    self.initDone = NO;
+    self.deviceToken = nil;
   }
-
   return self;
 }
 
@@ -35,6 +38,7 @@
     config.agentAvatarEnabled = YES;
 
     [[Hotline sharedInstance] initWithConfig:config];
+    self.initDone = YES;
   }
   @catch (NSException *exception) {
     NSLOG(@"{hotline} Failure to get: %@", exception);
@@ -96,14 +100,14 @@
 }
 
 - (void) didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken application:(UIApplication *)app {
-  NSLog(@"{hotline}: didRegisterNotification");
-  [[Hotline sharedInstance] updateDeviceToken:deviceToken];
+  if(self.initDone && (self.deviceToken == nil)) {
+    self.deviceToken = deviceToken;
+    [[Hotline sharedInstance] updateDeviceToken:deviceToken];
+  }
 }
 
 - (void) didReceiveRemoteNotification:(NSDictionary *)userInfo application:(UIApplication *)app {
-  NSLog(@"{hotline}: didReceiveNotification");
   if ([[Hotline sharedInstance]isHotlineNotification:userInfo]) {
-    NSLog(@"{hotline}: hotline notification!");
     [[Hotline sharedInstance]handleRemoteNotification:userInfo andAppstate:app.applicationState];
   }
 }
