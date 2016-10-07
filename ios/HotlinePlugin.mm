@@ -29,8 +29,8 @@
     self.viewController = appDelegate.tealeafViewController;
 
     HotlineConfig *config = [[HotlineConfig alloc]initWithAppID:appID andAppKey:appKey];
-    config.voiceMessagingEnabled = [self isBeforeiOS10];
-    config.pictureMessagingEnabled = [self isBeforeiOS10];
+    config.voiceMessagingEnabled = YES;
+    config.pictureMessagingEnabled = YES;
     config.showNotificationBanner = YES;
     config.agentAvatarEnabled = YES;
 
@@ -39,10 +39,6 @@
   @catch (NSException *exception) {
     NSLOG(@"{hotline} Failure to get: %@", exception);
   }
-}
-
-- (BOOL)isBeforeiOS10 {
-  return [[[UIDevice currentDevice] systemVersion] floatValue] < 10.0 ;
 }
 
 - (void) setName: (NSDictionary *)jsonObject {
