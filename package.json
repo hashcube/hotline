@@ -1,6 +1,9 @@
 {
   "name": "hotline",
   "version": "1.0.3",
+  "scripts": {
+    "postinstall": "sh ./postinstall.sh"
+  },
   "devkit": {
     "clientPaths": {
       "hotline": "js"
