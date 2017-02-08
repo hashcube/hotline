@@ -32,7 +32,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/hotline_label_deeplink</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
         <item name="android:layout_marginTop">4dp</item>
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:layout_marginLeft">20dp</item>
@@ -56,6 +56,13 @@
         <item name="android:textColor">@color/hotline_message_reply_text</item>
         <item name="android:textColorHint">@color/hotline_message_reply_hint_text</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Hotline.MessageReplyView">
+        <item name="android:background">@color/hotline_message_reply_view_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/hotline_message_reply_frame_min_height</item>
     </style>
 
     <style name="TextAppearance.Hotline.AgentName" parent="TextAppearance.Hotline.Small">
@@ -99,7 +106,144 @@
         <item name="android:padding">16dp</item>
     </style>
 
+    <!-- Chat Resolution Widget Styles -->
+
+    <style name="Widget.Hotline.ChatResolutionConfirmationPromptView">
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Widget.Hotline.ChatResolutionConfirmationPromptText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Hotline.Medium</item>
+        <item name="android:text">@string/hotline_label_chat_resolution_prompt</item>
+    </style>
+
+
+    <style name="Widget.Hotline.ChatResolutionPositiveButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:text">@string/hotline_label_chat_resolution_positive</item>
+    </style>
+
+    <style name="Widget.Hotline.ChatResolutionNegativeButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:text">@string/hotline_label_chat_resolution_negative</item>
+    </style>
+
+
+    <!-- Customer Survey Dialog Customizations -->
+
+    <style name="Widget.Hotline.CustomerSurveryQuestionStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">@integer/hotline_custsat_question_max_lines</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Hotline</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Hotline.CustomerSurveryCommentsEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:hint">@string/hotline_hint_cust_sat_user_comments_hint</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Hotline.CustomerSurveryRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+
+    <style name="Widget.Hotline.CustomerSurveryDialog.Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Action button text color -->
+        <!--<item name="colorAccent">@color/holo_orange_dark</item>-->
+        <!-- Dialog background-->
+        <!--<item name="android:windowBackground">@color/holo_blue_bright</item>-->
+        <!-- Dialog action button bar style -->
+        <!--<item name="android:buttonBarStyle">@style/ButtonBarStyle</item>-->
+        <!-- Dialog action button style -->
+        <!--<item name="android:borderlessButtonStyle">@style/BorderlessButtonStyle</item>-->
+
+    </style>
+
+    <style name="Widget.Hotline.CustomerSurveryDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- Action button text color -->
+        <!--<item name="colorAccent">@color/holo_orange_dark</item>-->
+        <!-- Dialog background-->
+        <!--<item name="android:windowBackground">@color/holo_blue_bright</item>-->
+        <!-- Dialog action button bar style -->
+        <!--<item name="android:buttonBarStyle">@style/ButtonBarStyle</item>-->
+        <!-- Dialog action button style -->
+        <!--<item name="android:borderlessButtonStyle">@style/BorderlessButtonStyle</item>-->
+    </style>
+
+
+    <style name="Widget.Hotline.Dialog.Alert.Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Action button text color -->
+        <!--<item name="colorAccent">@color/holo_orange_dark</item>-->
+        <!-- Dialog background-->
+        <!--<item name="android:windowBackground">@color/holo_blue_bright</item>-->
+        <!-- Dialog action button bar style -->
+        <!--<item name="android:buttonBarStyle">@style/ButtonBarStyle</item>-->
+        <!-- Dialog action button style -->
+        <!--<item name="android:borderlessButtonStyle">@style/BorderlessButtonStyle</item>-->
+
+    </style>
+
+    <style name="Widget.Hotline.Dialog.Alert" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- Action button text color -->
+        <!--<item name="colorAccent">@color/holo_orange_dark</item>-->
+        <!-- Dialog background-->
+        <!--<item name="android:windowBackground">@color/holo_blue_bright</item>-->
+        <!-- Dialog action button bar style -->
+        <!--<item name="android:buttonBarStyle">@style/ButtonBarStyle</item>-->
+        <!-- Dialog action button style -->
+        <!--<item name="android:borderlessButtonStyle">@style/BorderlessButtonStyle</item>-->
+    </style>
+
+    <!--<style name="ButtonBarStyle" parent="@style/Widget.AppCompat.ButtonBar.AlertDialog" />-->
+
+    <!--<style name="BorderlessButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless" />-->
+
+
     <!-- Channel Styling & Customizations -->
+
+    <style name="Widget.Hotline.ChannelList">
+        <item name="android:background">@null</item>
+    </style>
 
     <style name="Widget.Hotline.ChannelListItem">
         <item name="android:background">?attr/selectableItemBackground</item>
@@ -154,7 +298,19 @@
     </style>
 
     <style name="TextAppearance.Hotline.ChannelListEmptyText" parent="TextAppearance.Hotline.Medium"></style>
+
+    <style name="Widget.Hotline.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <!--Progress bar drawable-->
+        <!--<item name="android:indeterminate">true</item>-->
+        <!--<item name="android:indeterminateDrawable">@drawable/progress_bar_drawable</item>-->
+    </style>
+
     <!-- FAQ Category Styling & Customizations -->
+
+    <style name="Widget.Hotline.CategoryList">
+        <item name="android:background">@null</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
 
     <style name="Widget.Hotline.CategoryListItem">
         <item name="android:background">?attr/selectableItemBackground</item>

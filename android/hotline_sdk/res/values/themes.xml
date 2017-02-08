@@ -35,9 +35,11 @@
         <!-- Message Widget Styles -->
         <item name="hotlineMessageListStyle">@style/Widget.Hotline.MessageList</item>
         <item name="hotlineMessageListItemStyle">@style/Widget.Hotline.MessageListItem</item>
+        <item name="hotlineMessageReplyViewStyle">@style/Widget.Hotline.MessageReplyView</item>
         <item name="hotlineMessageDeepLinkStyle">@style/Widget.Hotline.MessageDeepLinkButton</item>
         <item name="hotlineMessageReplyEditTextViewStyle">@style/Widget.Hotline.MessageReplyEditText</item>
         <item name="hotlineConversationBannerMessageStyle">@style/Widget.Hotline.ConversationBannerMessage</item>
+        <item name="hotlineProgressBarStyle">@style/Widget.Hotline.ProgressBar</item>
 
         <!-- Message Text Styles -->
         <item name="hotlineAgentNameTextAppearance">@style/TextAppearance.Hotline.AgentName</item>
@@ -47,7 +49,23 @@
         <item name="hotlineAgentMessageTimeTextAppearance">@style/TextAppearance.Hotline.AgentMessageTime</item>
         <item name="hotlineVoiceMessageDurationTextAppearance">@style/TextAppearance.Hotline.VoiceMessageDuration</item>
 
+        <!-- Chat Resolution Confirmation Prompt Styles -->
+        <item name="hotlineChatResolutionPositiveButtonStyle">@style/Widget.Hotline.ChatResolutionPositiveButton</item>
+        <item name="hotlineChatResolutionNegativeButtonStyle">@style/Widget.Hotline.ChatResolutionNegativeButton</item>
+        <item name="hotlineChatResolutionConfirmationPromptTextStyle">@style/Widget.Hotline.ChatResolutionConfirmationPromptText</item>
+        <item name="hotlineChatResolutionConfirmationPromptViewStyle">@style/Widget.Hotline.ChatResolutionConfirmationPromptView</item>
+
+        <!-- Customer Survey Dialog Styles -->
+        <item name="hotlineCustomerSurveryDialog">@style/Widget.Hotline.CustomerSurveryDialog.Light</item>
+        <item name="hotlineCustomerSurveryQuestionStyle">@style/Widget.Hotline.CustomerSurveryQuestionStyle</item>
+        <item name="hotlineCustomerSurveryRatingBarStyle">@style/Widget.Hotline.CustomerSurveryRatingBar</item>
+        <item name="hotlineCustomerSurveryCommentsEditTextStyle">@style/Widget.Hotline.CustomerSurveryCommentsEditText</item>
+
+        <!--Alert Dialog Customization-->
+        <item name="hotlineAlertDialog">@style/Widget.Hotline.Dialog.Alert.Light</item>
+
         <!-- Channel Widget Styles -->
+        <item name="hotlineChannelListStyle">@style/Widget.Hotline.ChannelList</item>
         <item name="hotlineChannelListItemStyle">@style/Widget.Hotline.ChannelListItem</item>
         <item name="hotlineChannelAltIconStyle">@style/Widget.Hotline.ChannelAltIcon</item>
 
@@ -59,6 +77,7 @@
         <item name="hotlineChannelListEmptyWarningTextAppearance">@style/TextAppearance.Hotline.ChannelListEmptyText</item>
 
         <!-- FAQ Category Widget Styles -->
+        <item name="hotlineCategoryListStyle">@style/Widget.Hotline.CategoryList</item>
         <item name="hotlineCategoryListItemStyle">@style/Widget.Hotline.CategoryListItem</item>
         <item name="hotlineCategoryAltIconStyle">@style/Widget.Hotline.CategoryAltIcon</item>
 
@@ -117,9 +136,11 @@
         <!-- Message Widget Styles -->
         <item name="hotlineMessageListStyle">@style/Widget.Hotline.MessageList</item>
         <item name="hotlineMessageListItemStyle">@style/Widget.Hotline.MessageListItem</item>
+        <item name="hotlineMessageReplyViewStyle">@style/Widget.Hotline.MessageReplyView</item>
         <item name="hotlineMessageDeepLinkStyle">@style/Widget.Hotline.MessageDeepLinkButton</item>
         <item name="hotlineMessageReplyEditTextViewStyle">@style/Widget.Hotline.MessageReplyEditText</item>
         <item name="hotlineConversationBannerMessageStyle">@style/Widget.Hotline.ConversationBannerMessage</item>
+        <item name="hotlineProgressBarStyle">@style/Widget.Hotline.ProgressBar</item>
 
         <!-- Message Text Styles -->
         <item name="hotlineAgentNameTextAppearance">@style/TextAppearance.Hotline.AgentName</item>
@@ -129,7 +150,23 @@
         <item name="hotlineAgentMessageTimeTextAppearance">@style/TextAppearance.Hotline.AgentMessageTime</item>
         <item name="hotlineVoiceMessageDurationTextAppearance">@style/TextAppearance.Hotline.VoiceMessageDuration</item>
 
+        <!-- Chat Resolution Confirmation Prompt Styles -->
+        <item name="hotlineChatResolutionPositiveButtonStyle">@style/Widget.Hotline.ChatResolutionPositiveButton</item>
+        <item name="hotlineChatResolutionNegativeButtonStyle">@style/Widget.Hotline.ChatResolutionNegativeButton</item>
+        <item name="hotlineChatResolutionConfirmationPromptTextStyle">@style/Widget.Hotline.ChatResolutionConfirmationPromptText</item>
+        <item name="hotlineChatResolutionConfirmationPromptViewStyle">@style/Widget.Hotline.ChatResolutionConfirmationPromptView</item>
+
+        <!-- Customer Survey Dialog Styles -->
+        <item name="hotlineCustomerSurveryDialog">@style/Widget.Hotline.CustomerSurveryDialog.Light</item>
+        <item name="hotlineCustomerSurveryQuestionStyle">@style/Widget.Hotline.CustomerSurveryQuestionStyle</item>
+        <item name="hotlineCustomerSurveryRatingBarStyle">@style/Widget.Hotline.CustomerSurveryRatingBar</item>
+        <item name="hotlineCustomerSurveryCommentsEditTextStyle">@style/Widget.Hotline.CustomerSurveryCommentsEditText</item>
+
+        <!--Alert Dialog Customization-->
+        <item name="hotlineAlertDialog">@style/Widget.Hotline.Dialog.Alert.Light</item>
+
         <!-- Channel Widget Styles -->
+        <item name="hotlineChannelListStyle">@style/Widget.Hotline.ChannelList</item>
         <item name="hotlineChannelListItemStyle">@style/Widget.Hotline.ChannelListItem</item>
         <item name="hotlineChannelAltIconStyle">@style/Widget.Hotline.ChannelAltIcon</item>
 
@@ -141,6 +178,7 @@
         <item name="hotlineChannelListEmptyWarningTextAppearance">@style/TextAppearance.Hotline.ChannelListEmptyText</item>
 
         <!-- FAQ Category Widget Styles -->
+        <item name="hotlineCategoryListStyle">@style/Widget.Hotline.CategoryList</item>
         <item name="hotlineCategoryListItemStyle">@style/Widget.Hotline.CategoryListItem</item>
         <item name="hotlineCategoryAltIconStyle">@style/Widget.Hotline.CategoryAltIcon</item>
 
