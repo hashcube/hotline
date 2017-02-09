@@ -3,3 +3,4 @@ gen/
 local.properties
 *.sw[po]
 node_modules
+.DS_Store
