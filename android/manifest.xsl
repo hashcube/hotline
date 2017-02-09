@@ -16,7 +16,7 @@
     <meta-data android:name="HOTLINE_APP_KEY" android:value="{$hotlineAppKey}" />
   </xsl:template>
 
-  <xsl:template match="provider/@android:authorities[.='com.hashcube.test']">
+  <xsl:template match="provider/@android:authorities[.='your_package_name.provider']">
     <xsl:attribute name="android:authorities">
       <xsl:value-of select="concat($package, '.provider')" />
     </xsl:attribute>
