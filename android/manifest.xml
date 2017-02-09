@@ -57,10 +57,13 @@
 
   <receiver android:name="com.freshdesk.hotline.receiver.HotlineReceiver">
     <intent-filter>
-      <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-    </intent-filter>
-    <intent-filter>
       <action android:name="android.intent.action.BOOT_COMPLETED" />
+    </intent-filter>
+  </receiver>
+
+  <receiver android:name="com.freshdesk.hotline.receiver.HotlineNetworkChangeReceiver">
+    <intent-filter>
+      <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
     </intent-filter>
   </receiver>
 
@@ -69,5 +72,15 @@
       <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
     </intent-filter>
   </receiver>
+
+  <provider
+    android:name="android.support.v4.content.FileProvider"
+    android:authorities="com.hashcube.test"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/hotline_file_provider_paths" />
+</provider>
 
 <!--END_PLUGINS_APPLICATION-->
