@@ -7,25 +7,11 @@ var path = require('path'),
 exports.onCreateProject = function (api, app, config, cb) {
   var packageName = app.manifest.android.packageName || "",
     androidProjectPath = config.outputPath,
-    strings_file = 'hotline_strings.xml',
-    conf;
+    strings_file = 'hotline_strings.xml';
 
   if (config.target == 'native-android') {
-    conf = {
-      hotline_file_provider_authority: packageName + ".provider",
-    };
     xmlStr = new xmldoc.XmlDocument(fs.readFileSync(path.join(__dirname, '../android/strings.xml'), 'utf-8'));
-
-    for (var i = 0; i < xmlStr.children.length; i++) {
-      var currStrDom = xmlStr.children[i],
-        attrName = currStrDom.attr.name;
-
-      if (currStrDom.name === 'string' && attrName in conf) {
-        console.log(attrName, conf[attrName]);
-        currStrDom.val = conf[attrName];
-      }
-    }
-
+    xmlStr.children[0].val = packageName + ".provider";
     return fs.outputFileAsync(path.join(androidProjectPath, 'res/values', strings_file), xmlStr.toString(), 'utf-8');
   }
 
