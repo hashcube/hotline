@@ -3,6 +3,7 @@
 
   <xsl:param name="hotlineAppID" />
   <xsl:param name="hotlineAppKey" />
+  <xsl:param name="package" />
 
   <xsl:output indent="yes" />
   <xsl:template match="comment()" />
@@ -13,6 +14,12 @@
 
   <xsl:template match="meta-data[@android:name='HOTLINE_APP_KEY']">
     <meta-data android:name="HOTLINE_APP_KEY" android:value="{$hotlineAppKey}" />
+  </xsl:template>
+
+  <xsl:template match="provider/@android:authorities[.='your_package_name.provider']">
+    <xsl:attribute name="android:authorities">
+      <xsl:value-of select="concat($package, '.provider')" />
+    </xsl:attribute>
   </xsl:template>
 
   <xsl:output indent="yes" />

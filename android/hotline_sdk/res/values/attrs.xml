@@ -23,6 +23,8 @@
     <attr name="hotlineChatBubbleRight" format="reference" />
 
     <!-- Misc -->
+    <attr name="hotlineAlertDialog" format="reference" />
+    <attr name="hotlineProgressBarStyle" format="reference" />
     <attr name="hotlineVoiceVisualizer" format="reference" />
     <attr name="hotlineVoiceMessageSeekbar" format="reference" />
     <attr name="hotlineVoiceMessageSeekbarThumb" format="reference" />
@@ -32,6 +34,10 @@
     <attr name="hotlineContactUsTextAppearance" format="reference" />
 
     <!-- FAQ Category List Item Customizations -->
+    <!-- Style for the category list view -->
+    <attr name="hotlineCategoryListStyle" format="reference" />
+
+    <!-- Style for the each of the items in the category list -->
     <attr name="hotlineCategoryListItemStyle" format="reference" />
     <attr name="hotlineCategoryNameTextAppearance" format="reference" />
     <attr name="hotlineCategoryDescriptionTextAppearance" format="reference" />
@@ -51,6 +57,10 @@
     <attr name="hotlineArticleDownvoteStyle" format="reference" />
 
     <!-- Message Channel Item Customizations -->
+    <!-- Style for the channel list view -->
+    <attr name="hotlineChannelListStyle" format="reference" />
+
+    <!-- Style for the each of the items in the channel list -->
     <attr name="hotlineChannelListItemStyle" format="reference" />
     <attr name="hotlineChannelAltIconStyle" format="reference" />
     <attr name="hotlineChannelNameTextAppearance" format="reference" />
@@ -62,17 +72,34 @@
     <!-- Message List Item Customizations -->
     <!-- Style for the message list view -->
     <attr name="hotlineMessageListStyle" format="reference" />
+
     <!-- Style for the each of the items in the message list -->
     <attr name="hotlineMessageListItemStyle" format="reference" />
     <attr name="hotlineMessageDeepLinkStyle" format="reference" />
-    <attr name="hotlineMessageReplyEditTextViewStyle" format="reference" />
-
     <attr name="hotlineAgentNameTextAppearance" format="reference" />
     <attr name="hotlineUserMessageTextAppearance" format="reference" />
     <attr name="hotlineAgentMessageTextAppearance" format="reference" />
     <attr name="hotlineUserMessageTimeTextAppearance" format="reference" />
     <attr name="hotlineAgentMessageTimeTextAppearance" format="reference" />
     <attr name="hotlineVoiceMessageDurationTextAppearance" format="reference" />
+
+    <!-- Style for the message reply view -->
+    <attr name="hotlineMessageReplyViewStyle" format="reference" />
+    <attr name="hotlineMessageReplyEditTextViewStyle" format="reference" />
+
+    <!-- Chat Resolution Confirmation Prompt Styles -->
+    <attr name="hotlineChatResolutionConfirmationPromptViewStyle" format="reference" />
+    <attr name="hotlineChatResolutionConfirmationPromptTextStyle" format="reference" />
+    <attr name="hotlineChatResolutionPositiveButtonStyle" format="reference" />
+    <attr name="hotlineChatResolutionNegativeButtonStyle" format="reference" />
+
+    <!-- Customer Survey Dialog Customizations -->
+    <attr name="hotlineCustomerSurveryDialog" format="reference" />
+    <attr name="hotlineCustomerSurveryQuestionStyle" format="reference" />
+    <attr name="hotlineCustomerSurveryRatingBarStyle" format="reference" />
+    <attr name="hotlineCustomerSurveryCommentsEditTextStyle" format="reference" />
+
+    <!-- Misc - Conversation Detail Screen -->
     <attr name="hotlineConversationBannerMessageStyle" format="reference" />
 
 </resources>
