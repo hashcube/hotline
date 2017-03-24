@@ -14,7 +14,7 @@
 
     <!-- [Optional] Hotline needs external storage access to store voice messages -->
     <!-- Can be removed/negated if voice messaging is disabled -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
 
     <!-- Keeps the processor from sleeping when a message is received. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
