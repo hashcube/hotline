@@ -41,7 +41,7 @@ public class HotlinePlugin implements IPlugin {
 
     HotlineConfig hlConfig = new HotlineConfig(appID, appKey);
     // TODO: Read these from config
-    hlConfig.setVoiceMessagingEnabled(false);
+    hlConfig.setVoiceMessagingEnabled(false); // On enabling should add external_storage permission in hotline_sdk
     hlConfig.setCameraCaptureEnabled(false);
     hlConfig.setPictureMessagingEnabled(false);
 
