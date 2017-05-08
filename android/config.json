@@ -6,7 +6,8 @@
     "hotline_sdk"
   ],
   "jars": [
-    "libs/hotline_1.2.1.jar"
+    "libs/hotline_1.2.1.jar",
+    "libs/support-vector-drawable.jar"
   ],
   "injectionXML": "manifest.xml",
   "injectionXSL": "manifest.xsl"
