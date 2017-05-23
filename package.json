@@ -1,6 +1,6 @@
 {
   "name": "hotline",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "scripts": {
     "postinstall": "sh ./postinstall.sh"
   },
