@@ -1,22 +1,25 @@
 #import "HotlinePlugin.h"
 
 @interface HotlinePlugin()
+@property (nonatomic, retain) NSData *deviceToken;
+@property (nonatomic) BOOL initDone;
 @end
 
 @implementation HotlinePlugin
 
+
 // The plugin must call super dealloc.
 - (void) dealloc {
+  [self.deviceToken release];
   [super dealloc];
 }
 
 // The plugin must call super init.
 - (id) init {
-  self = [super init];
-  if (!self) {
-    return nil;
+  if(self = [super init]) {
+    self.initDone = NO;
+    self.deviceToken = nil;
   }
-
   return self;
 }
 
@@ -35,6 +38,7 @@
     config.agentAvatarEnabled = YES;
 
     [[Hotline sharedInstance] initWithConfig:config];
+    self.initDone = YES;
   }
   @catch (NSException *exception) {
     NSLOG(@"{hotline} Failure to get: %@", exception);
@@ -85,12 +89,26 @@
 }
 
 - (void) getUnreadCountAsync: (NSDictionary *)jsonObject {
+  NSLOG(@"{hotline}: get unread count");
   [[Hotline sharedInstance]unreadCountWithCompletion:^(NSInteger count) {
-      NSLog(@"Unread count (Async) : %d", (int)count);
+      NSLOG(@"{hotline}: Unread count (Async) : %d", (int)count);
       [[PluginManager get] dispatchJSEvent:[NSDictionary dictionaryWithObjectsAndKeys:
                             @"hotlineUnreadCount", @"name",
                             [NSString stringWithFormat: @"%ld", count], @"count",
                             nil]];
   }];
+}
+
+- (void) didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken application:(UIApplication *)app {
+  if(self.initDone && (self.deviceToken == nil)) {
+    self.deviceToken = deviceToken;
+    [[Hotline sharedInstance] updateDeviceToken:deviceToken];
+  }
+}
+
+- (void) didReceiveRemoteNotification:(NSDictionary *)userInfo application:(UIApplication *)app {
+  if ([[Hotline sharedInstance]isHotlineNotification:userInfo]) {
+    [[Hotline sharedInstance]handleRemoteNotification:userInfo andAppstate:app.applicationState];
+  }
 }
 @end
